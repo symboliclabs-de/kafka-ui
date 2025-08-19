@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kafka UI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📨 Kafka Messages</h1>
+            <div class="controls">
+                <select id="topicSelect">
+                    <option value="">Select topic...</option>
+                </select>
+                <div class="connection-status">
+                    <div class="status-indicator" id="statusIndicator"></div>
+                    <span class="status-text" id="statusText">Connecting...</span>
+                </div>
+                <button id="subscribeBtn">Subscribe</button>
+            </div>
+        </header>
+
+        <div class="search-container">
+            <div class="search-box">
+                <input type="text" id="globalSearch" placeholder="🔍 Search messages (key, value, headers, event_type, etc.)...">
+                <button id="clearSearchBtn">✕</button>
+            </div>
+        </div>
+
+        <div class="messages-container">
+            <div class="messages-header">
+                <span>Messages (<span id="messageCount">0</span>)</span>
+                <small>Shows the latest 100 messages</small>
+            </div>
+            <div class="messages" id="messages">
+                <div class="no-messages">
+                    No messages available. Select a topic and click Subscribe.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        Made with ❤️ by <a href="https://symboliclabs.de" target="_blank" rel="noopener">SymbolicLabs</a>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
