@@ -1,0 +1,10 @@
+version: 2
+
+updates:
+  - package-ecosystem: "npm"
+    assignees: ["LLoydcc"]
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    cooldown:
+      default-days: 7
